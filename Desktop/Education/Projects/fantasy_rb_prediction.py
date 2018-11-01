@@ -16,7 +16,7 @@ from sklearn import tree, preprocessing
 # and (simply enough) the player's own team.
 
 # First retrieve the data for all past weeks of RB performance
-train_link = "combined_rb_stats_2.csv"
+train_link = "Fantasy_RB_data/combined_rb_stats_2.csv"
 rb_data = read_data(train_link)
 
 # Separate the data from the targets
@@ -57,7 +57,7 @@ div_rival = list(le_div.classes_)
 rb_data['Div Rival?'] = le_div.transform(rb_data['Div Rival?'])
 
 # Now we're retrieving this weeks data
-test_link = "fantasy_rb_week9_2.csv"
+test_link = "Fantasy_RB_data/fantasy_rb_week9_2.csv"
 rb_data2 = read_data(test_link)
 
 # Separate this data
